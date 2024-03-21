@@ -1,18 +1,49 @@
-# Make Your DoodleBot!
+# Setting up the Microbit and MIT App Inventor
+Prepare the Microbits to collect data and give your plant a personality.
 
-You can assemble your DoodleBot in just a few steps.
+You can assemble your Microbit and sensor in just a few steps. 
 
-Thanks to the MakerBox by Ken, where we borrowed the initial design of the chassis from. 
+## 1. Setting up the Microbit
+* 1. Get the Microbit Code. 
+The Microbit needs code to activate sensors and send data to student apps.
+ Go to:  https://makecode.microbit.org/S97971-17452-78128-79842
+ * Click the button Edit Code in the top right corner:
+<img align="center" width="450" height="450" src="./images/editMicrobit.png" title="Image 1">
+ 
+ * You should see the following page:
+<img align="center" width="450" height="450" src="./images/MicrobitCode.png" title="Image 2">
+ 
+ * Decide whether you should log into Microbit.org (top right). If you do not log in, the code will always be saved on the computer you are using. If you log in, the code will be saved to an online account you can use on any computer. 
 
-## 1. Collect parts
+ * Briefly check out the Microbit code used for this lesson. This code will collect temperature, humidity, and moisture data with the external sensor. The Microbit will send data to the phone app every 2 seconds over Bluetooth.  
 
-First, you will need to gather a few parts.
+ * 2. Connect the Microbit to the USB cable
+Connect the Microbit and your computer to the black USB cable with the device (or use any typical Micro-USB cable you have available). 
+<img align="center" width="450" height="450" src="./images/ConnectMicrobit.png" title="Image 3">
+
+* The Microbit should light up!
+<img align="center" width="450" height="450" src="./images/LightMicrobit.png" title="Image 4">
+
+* 3. Download the code to the Microbit
+* Click on the three dots as shown.
+<img align="center" width="450" height="450" src="./images/code1.png" title="Image 5">
+
+* Choose Connect Device and follow the directions on the screen to connect the Microbit to the computer. (The Microbit will automatically connect to this computer from now on.)
+<img align="center" width="450" height="450" src="./images/code2.png" title="Image 6">
+
+* Click Download. 
+<img align="center" width="450" height="450" src="./images/code3.png" title="Image 7">
+
+You may see a computer notification, “Disk not ejected properly!” You can safely ignore this warning.
+Troubleshooting: If the Microbit does not download, follow the instructions provided on your screen or the tips in Appendix B. Don’t worry — the solution is not complicated! 
+
+* After about a minute, you should see a graphic of a little sleeping guy on the LED display. Success! 
+<img align="center" width="450" height="450" src="./images/connected.png" title="Image 8">
+ 
+* From now on, this microbit will always hold onto your new code, even when unplugged. 
 
 
-<img align="left" width="450" height="450" src="./images/parts_1.jpg" title="Image 1">
-<img align="left" width="150" height="150" src="./images/parts_2.jpg" title="Image 2">
-<img align="center" width="150" height="150" src="./images/parts_3.jpg" title="Image 3">
-<img align="center" width="150" height="150" src="./images/parts_4.jpg" title="Image 4">
+
 
 ### Electronics:
 * 1x Arduino UNO or equivalent- adafruit.com/products/50
