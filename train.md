@@ -37,23 +37,23 @@
 
 # ChatGPT Limitations
 - It can be incorrect. In this example, you can see that it got a math question wrong: 
-<img align="center" src="./images/GPT3">
+<img align="center" src="./images/GPT3.png" title="image 1">
 
 - It does not have as much creative capacity as humans. While ChatGPT can generate text based on patterns and structures it has learned from its training data, it does not have the ability to create original ideas or engage in creative problem-solving in the same way that humans can. 
  
  - It doesn’t know recent events. ChatGPT sometimes would not be correct on recent events, since that is not included in the dataset. 
-<img align="center" src="./images/GPT4">
+<img align="center" src="./images/GPT4.png">
 
 
 - Some responses from ChatGPT can reflect algorithmic bias based on the dataset it has been trained on or the people who wrote the original algorithms and have provided feedback.  For example, when asked about prominent scientists in history, the response is scientists that are exclusively from Europe or North America, and primarily men (8 out of 10). 
-<img align="center" src="./images/GPT5">
+<img align="center" src="./images/GPT5.png">
 
 - Sometimes, ChatGPT may "Hallucinate" an answer. It would predict an incorrect answer based on its training data, this could be in the form of telling "real" stories about non-existing people, or in this case, answering a question about a common riddle wrong when the riddle was altered slightly, 
-<img align="center" src="./images/gptH1">
+<img align="center" src="./images/gptH1.png">
 
 # Plant-GPT Connection
 - Now, how do we link GPT to our plant and how can it benefit us? Here's a brief explaination: 
-<img align="center" src="./images/GPT6">
+<img align="center" src="./images/GPT6.png">
 
 - First, you have a lonely plant that is incapable of expressing it’s feelings. When you decide to give it a voice, you would start by 
 adding a sensor to its soil.

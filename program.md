@@ -13,7 +13,7 @@
 
 # Crafting The Plant's Persona 
 - To give your plant a unique persona, use this activity sheet and be as creative as you can be! 
-<img align="center" src="./images/plantgpt">
+<img align="center" src="./images/plantgpt.png">
 - Once you're done, try to put the information you came up with into sentences and add these prompts into your blocks of code on App Inventor. This process would be called "Prompt Engineering"
 
 
