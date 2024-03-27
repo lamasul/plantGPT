@@ -37,7 +37,7 @@
 
 # ChatGPT Limitations
 - It can be incorrect. In this example, you can see that it got a math question wrong: 
-<img align="center" src="./images/GPT3.png" title="image 1">
+<img align="center" src="./images/GPT3.png" >
 
 - It does not have as much creative capacity as humans. While ChatGPT can generate text based on patterns and structures it has learned from its training data, it does not have the ability to create original ideas or engage in creative problem-solving in the same way that humans can. 
  
