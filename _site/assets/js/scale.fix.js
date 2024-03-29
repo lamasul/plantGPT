@@ -24,4 +24,23 @@
         document.addEventListener("touchstart", gestureStart, false);
         document.addEventListener("touchend", gestureEnd, false);
     }
+
+    const images = document.querySelectorAll('.image-container img');
+
+
+        images.forEach((image) => {
+  
+  image.addEventListener('mouseenter', () => {
+    // Scale the image when hovered over
+    image.style.transform = 'scale(1.2)';
+    image.style.transition = 'transform 0.3s ease';
+  });
+
+  // Add event listener for mouse leave
+  image.addEventListener('mouseleave', () => {
+    // Reset the image scale when mouse leaves
+    image.style.transform = 'scale(1)';
+    image.style.transition = 'transform 0.3s ease';
+  });
+});
 })(document);
