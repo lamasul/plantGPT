@@ -1,210 +1,70 @@
-# Train Your DoodleBot!
+#  What is ChatGPT?
+- Most people have spoken with a chatbot at least once in their lives. Chatbots are all around us, such as Amazon's Alexa, Apple's Siri, or even a textbox on your computer screen. 
+- ChatGPT is a Chatbot (hence the name “Chat”) which is a computer program that uses artificial intelligence to conduct an online conversation
+- ChatGPT uses the large language model, currently GPT-4 which is why it is called “ChatGPT”
 
-## Sound classification
+#  What is a Large Language Model? 
+- Chatbots like ChatGPT use a large language model to generate humanlike dialogue 
+- A large language model is a computer program that learns to predict which words usually follow which. For example, let’s say a large language model is given a sentence “Once upon a ___". The word it would learn is most likely to follow next is “time”.
 
-**Main steps:**
+#  How was ChatGPT made?
+<img align="center" src="./images/GPT2.png">
 
-1. Set up a server with the boilerplace that uses ML5
-2. Use a pre-trained model speech-commands to recognize speech
-3. Design a web interface that recognized the speech word and prints it to a file
-4. Use this file to load the current speech and send it to Arduino 
+- This is a diagram of the machine learning process. We start with a dataset. We then feed that dataset to a learning algorithm which finds patterns in the data it sees. Finally, the patterns are encoded in a “model”, which makes predictions about new data it sees that’s outside its original dataset.
 
-**Step 1: Set up a server with the boilerplate that uses ML5**
+# # #Dataset
+- ChatGPT is fed chunks words, paragraphs and sentences from BILLIONS of sources on the internet:
+- - articles, magazines, scientific papers,
+- - Twitter
+- - Wikipedia
+- - Blogs. 
 
-1. Download the boilerplate here : https://drive.google.com/open?id=14w6u65YhrZ5H0LI_JHK-Zqxa3Mltz3X1
-2. In the folder above, you will find two files : index.html and sketch.js. Your HTML code (interface) will go in index.html file, and your Javascript code will go in the sketch.js file. 
-3. Let’s examine the files : 
-  a. index.html 
+- It learns to create new sentences and paragraphs from all these examples of language online.
 
-  Verify that your code in **index.html** looks like this: 
+# # # Learning Algorithm 
+- The first step in learning is called “Language Modeling”. Here, ChatGPT is basically just learning how language works in a very basic way by looking at those billions of webpages and documents, getting a sense of how words flow from sentence to sentence, paragraph to paragraph, etc.
+- Then, we get ChatGPT to learn the patterns of conversations. Before, it saw text of all kinds - now, we give it data that is specifically made up of texting conversations, comment threads, etc. that real people have had.  We feed it the first part of the conversation. Then, we ask it for a prediction of what the next text/comment should be
+- Finally, to talk to humans even better, ChatGPT is trained AGAIN using a process called Reinforcement Learning. First, ChatGPT gives several possible responses to a text from a human; Then, that human rates the responses from most relevant to least relevant response. ChatGPT learns to reward patterns of language it sees in the most likely response, and de-prioritize patterns in the least likely one. This makes the model better at generating dialogue in the future. 
 
-  This code contains html tags <head> and <body>. In the ```<head>```, we load all the p5.js libraries which are responsible for the look and feel of the webpage and in the ```<body>```, we load the sketch.js file, while is responsible for the logic of the webpage. 
+# # # Prediction
+- After all of that training, with: 
+1. Dataset - BILLIONS of web pages
+2. Learning
+- 1. Which words follow which
+- 2. Understanding Conversation Patterns. (I.e., which texts follow which)
+- 3. Conversation Practice with Human Feedback
+- We have… ChatGPT!
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Getting Started with ml5.js</title>
-    <!-- p5 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
-    <!-- ml5 -->
-    <script src="https://unpkg.com/ml5@0.3.0/dist/ml5.min.js"></script>
-  </head>
+# ChatGPT Limitations
+- It can be incorrect. In this example, you can see that it got a math question wrong: 
+<img align="center" src="./images/GPT3.png" >
 
-  <body>
-    <script src="sketch.js"></script>
-  </body>
-</html>
-```
+- It does not have as much creative capacity as humans. While ChatGPT can generate text based on patterns and structures it has learned from its training data, it does not have the ability to create original ideas or engage in creative problem-solving in the same way that humans can. 
+ 
+ - It doesn’t know recent events. ChatGPT sometimes would not be correct on recent events, since that is not included in the dataset. 
+<img align="center" src="./images/GPT4.png">
 
-  b. sketch.js
 
-This is the base sketch file. All p5.js files have a setup() function, where you set up your space, and a draw() which updates constantly to run stuff. To learn more, go to: https://p5js.org
+- Some responses from ChatGPT can reflect algorithmic bias based on the dataset it has been trained on or the people who wrote the original algorithms and have provided feedback.  For example, when asked about prominent scientists in history, the response is scientists that are exclusively from Europe or North America, and primarily men (8 out of 10). 
+<img align="center" src="./images/GPT5.png">
 
-```javascript
-console.log('ml5 version:', ml5.version);
+- Sometimes, ChatGPT may "Hallucinate" an answer. It would predict an incorrect answer based on its training data, this could be in the form of telling "real" stories about non-existing people, or in this case, answering a question about a common riddle wrong when the riddle was altered slightly, 
+<img align="center" src="./images/gptH1.png">
 
-function setup(){
-    createCanvas(400, 400);
-}
+# Plant-GPT Connection
+- Now, how do we link GPT to our plant and how can it benefit us? Here's a brief explaination: 
+<img align="center" src="./images/GPT6.png">
 
-function draw(){
-    background(200);
-    
-}
-```
+- First, you have a lonely plant that is incapable of expressing it’s feelings. When you decide to give it a voice, you would start by 
+adding a sensor to its soil.
+- This sensor detects temperature, humidity, and moisture levels in your plant’s soil. To store this data 
+somewhere, you connect the sensor to a microbit. Now, you have data on your plant but you can’t see it yet so you’ll then connect the microbit that’s storing all your plant’s data to App Inventor, which will display your data in charts on your app in front of you.
+- Although your plants stats are now in front of you, you may not be able to interpret whether your plant is in good condition or not,
+here’s where app inventor sends the plant’s data to chatgpt, which interprets the stats for you and writes a brief on what they
+mean. 
+- Chatgpt now sends the brief to app inventor which displays it on your screen, and app inventor will send the brief to the
+Microbit which now displays either a happy face or sad face accordingly
 
-In this **sketch.js** file, we simply make a canvas and we print the ml5 version to our console in the browser. We will first test if this works.
-	
-  c. Run the server. 
 
-In order to test if this is working, we will run a local server. 
 
-Go to your terminal, and navigate to the directory: 
 
-  * First navigate to home directory in the terminal: 
-  ```cd```
-  * Then navigate to the project directory (this will depend on where your boilerplate folder is):
-  ```cd Documents/biolerplate-sound```
-
-Your folder might be in downloads instead of documents for example, if this is the case, replace the ```cd Documents/``` part with ```cd Downloads/```.
-
-  * In this folder, run the following command in your terminal to start a local server : 
-  ```python -m SimpleHTTPServer 8000```
-
-  * If you get an error here, check what python version you have by using which python in your terminal. It should give you a result like : ```/Library/Frameworks/Python.framework/Versions/2.7/bin/python```.
-
-  * This also works:
-  ```(//anaconda3/bin/python)```
-  If this is the case put this in instead:
-   ```python3 -m http.server```
-
-  * If it leads to no result, it means you need to install python. 
-
-  * In order to test if the server is running, go to: http://localhost:8000 in your browser and you should see this: 
-
-If you right click and go to ```inspect element >``` and then select the ‘console’ tab, you can see the browser’s console. In the console, you should see: ```0.3.0``` to verify that your server is working correctly. 
-
-Now stop your server in the terminal. If you Control+C in your terminal, the server should stop. 
-
-## Step 2: Use a pre-trained model SoundClassifier to recognize speech words : 
-
-The model we will be using is called speech-commands recognizer model. The ml5.soundClassifier() allows you to classify audio. With the right pre-trained models, you can detect whether a certain noise was made (e.g. a clapping sound or a whistle) or a certain word was said (e.g. Up, Down, Yes, No). At this moment, with the ml5.soundClassifier(), you can use the "SpeechCommands18w" which can recognize "the ten digits from "zero" to "nine", "up", "down", "left", "right", "go", "stop", "yes", "no", as well as the additional categories of "unknown word" and "background noise"."
-
-To read more about this mode, go to : https://github.com/tensorflow/tfjs-models/tree/master/speech-commands
-
-For our application, we will use numbers, directions, “go”, and “stop” to make the doodle bot draw things. Ensure that your Arduino file has functions for all of these (zero" to "nine", "up", "down", "left", "right", "go", "stop")
-
-  1. Open the index.html file. In the <head> tag, let’s first make the title of the page relevant to sound classification. 
-
-  ```html
-  <title>Sound classification using SpeechCommands18w and p5.js</title>
-```
-
-  In the body tag, we will write some info to display what the model is actually doing.
-  
-```html
-<body>
-  <h1>Sound classification using SpeechCommands18w and p5.js</h1>
-  <p>Try to speak the following commands to your microphone: 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'up', 'down', 'left', 'right', 'go', 'stop', 'yes', and 'no', in addition to 'background_noise' and 'unknown'</p>
-  <script src="sketch.js"></script>
-</body>
-```
-
-  2. Open the **sketch.js** file. Let’s first get rid of the createCanvas from the biolerplate, since we don’t need that. In addition to the setup() and sketch() function, we will add a preload() function before setup(). The preload() function loads the model in advance, in effect saving us time to load the model (when it is added in setup()), even before the interface is loaded. We do this since it quickens the process of loading the model, which is typically time consuming.
-
-```javascript
-function preload() {
-  // Load SpeechCommands18w sound classifier model
-  classifier = ml5.soundClassifier('SpeechCommands18w', options);
-}
-```
-
-  3. We will now declare some variables in the beginning of **sketch.js**.
-
-```javascript
-// Initialize a sound classifier method with SpeechCommands18w model.
-let classifier;
-// Options for the SpeechCommands18w model, the default probabilityThreshold is 0
-const options = { probabilityThreshold: 0.7 };
-// Two variable to hold the label and confidence of the result
-let label;
-let confidence;
-```
-
-  4. setup() function:
-
-```javascript
-function setup() {
-  noCanvas();
-  // Create 'label' and 'confidence' div to hold results
-  label = createDiv('Label: ...');
-  confidence = createDiv('Confidence: ...');
-  // Classify the sound from microphone in real time
-  classifier.classify(gotResult);
-}
-
-  5. gotResult() function:
-```javascript
-// A function to run when we get any errors and the results
-function gotResult(error, results) {
-  // Display error in the console
-  if (error) {
-    console.error(error);
-  }
-  // The results are in an array ordered by confidence.
-  console.log(results);
-  // Show the first label and confidence
-  label.html('Label: ' + results[0].label);
-  confidence.html('Confidence: ' + nf(results[0].confidence, 0, 2)); // Round the confidence to 0.01
-}
-```
-
-  6. Finally, your **sketch.js** file should look this this: 
-
-```javascript
-// Initialize a sound classifier method with SpeechCommands18w model. A callback needs to be passed.
-let classifier;
-// Options for the SpeechCommands18w model, the default probabilityThreshold is 0
-const options = { probabilityThreshold: 0.7 };
-// Two variable to hold the label and confidence of the result
-let label;
-let confidence;
-
-function preload() {
-  // Load SpeechCommands18w sound classifier model
-  classifier = ml5.soundClassifier('SpeechCommands18w', options);
-}
-
-function setup() {
-  noCanvas();
-  // Create 'label' and 'confidence' div to hold results
-  label = createDiv('Label: ...');
-  confidence = createDiv('Confidence: ...');
-  // Classify the sound from microphone in real time
-  classifier.classify(gotResult);
-}
-
-// A function to run when we get any errors and the results
-function gotResult(error, results) {
-  // Display error in the console
-  if (error) {
-    console.error(error);
-  }
-  // The results are in an array ordered by confidence.
-  console.log(results);
-  // Show the first label and confidence
-  label.html('Label: ' + results[0].label);
-  confidence.html('Confidence: ' + nf(results[0].confidence, 0, 2)); // Round the confidence to 0.01
-}
-```
-
-Now run your server again (Step 3.c.) and load the localhost in your browser. 
-
-  7. Now write the result to a file in your arduino folder by using the write(data) function of p5.js. Read that file using Arduino IDE to tell the robot what to draw. 
-
-  For reference: 
-  * P5.js side (in your sketch.js file) : https://p5js.org/reference/#/p5.PrintWriter/write
-  * Arduino side (in your .ino file) https://www.arduino.cc/en/Reference/FileRead
