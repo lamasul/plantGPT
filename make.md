@@ -4,9 +4,10 @@ Prepare the Microbits to collect data and give your plant a personality.
 You can assemble your Microbit and sensor in just a few steps. 
 
 ## 1. Setting up the Microbit
-* 1. Get the Microbit Code. 
+* Get the Microbit Code. 
 The Microbit needs code to activate sensors and send data to student apps.
- Go to:  https://makecode.microbit.org/S97971-17452-78128-79842
+ (Get the code) [https://makecode.microbit.org/S97971-17452-78128-79842]
+
  * Click the button Edit Code in the top right corner:
 <img align="center" width="450" height="450" src="./images/editMicrobit.png" title="Image 1">
  
